@@ -17,7 +17,7 @@ public class MetaDBConfig {
 
     @Primary
     @Bean
-    @ConfigurationProperties(prefix = "spring.datasource-meta")
+    @ConfigurationProperties(prefix = "spring.datasource-meta") //YAML 파일에 spring.datasource-meta로 시작하는 설정들을 객체에 매핑한다는 뜻이다
     public DataSource metaDBSource() {
 
         return DataSourceBuilder.create().build();
